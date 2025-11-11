@@ -138,33 +138,6 @@ return {
             }
         end,
     },
-    -- {
-    --     "nvim-telescope/telescope.nvim",
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         {
-    --             "nvim-telescope/telescope-fzf-native.nvim",
-    --             build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
-    --         },
-    --     },
-    --     config = function()
-    --         require("telescope").setup {
-    --             pickers = {
-    --                 find_files = {
-    --                     theme = "ivy",
-    --                 },
-    --             },
-    --         }
-    --         vim.keymap.set("n", "<leader>fd", function()
-    --             require("telescope.builtin").find_files { hidden = true }
-    --         end)
-    --         vim.keymap.set("n", "<leader>fe", function()
-    --             require("telescope.builtin").find_files {
-    --                 cwd = "~/cn/monorepo/frontend",
-    --             }
-    --         end)
-    --     end,
-    -- },
     {
         "cameron-wags/rainbow_csv.nvim",
         config = true,
@@ -851,6 +824,7 @@ return {
     {
         "supermaven-inc/supermaven-nvim",
         event = "VeryLazy",
+        enabled = false,
         config = function()
             require("supermaven-nvim").setup {
                 keymaps = {
@@ -902,7 +876,6 @@ return {
     --         "MunifTanjim/nui.nvim",
     --         --- The below dependencies are optional,
     --         "echasnovski/mini.pick", -- for file_selector provider mini.pick
-    --         "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     --         "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     --         "ibhagwan/fzf-lua", -- for file_selector provider fzf
     --         "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
@@ -940,7 +913,6 @@ return {
     --     dependencies = {
     --         { "MunifTanjim/nui.nvim" },
     --         { "nvim-lua/plenary.nvim" },
-    --         { "nvim-telescope/telescope.nvim" },
     --     },
     --     cmd = { "ChatGPT", "ChatGPTActAs", "ChatGPTRun", "ChatGPTEditWithInstructions" },
     --     config = function()

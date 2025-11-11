@@ -154,8 +154,6 @@ local options = {
             style = "default", -- default/flat_light/flat_dark/atom/atom_colored
         },
 
-        telescope = { style = "borderless" }, -- borderless / bordered
-
         statusline = {
             enabled = false,
             theme = "vscode",

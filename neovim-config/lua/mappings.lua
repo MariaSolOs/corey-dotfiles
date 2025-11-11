@@ -64,17 +64,6 @@ end, { desc = "Get current node type" })
 --
 -- lsp
 --
--- nmap("gd", vim.lsp.buf.definition, "[G]oto [D]definition")
--- nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]definition")
--- -- nmap("gr", vim.lsp.buf.references, "[G]oto [R]eferences")
--- nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
--- -- nmap("gi", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
--- nmap("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
--- -- nmap("gt", vim.lsp.buf.type_definition, "[G]oto [T]ype Definition")
--- nmap("gt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
--- nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]symbols")
--- nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]symbols")
---
 map("n", "gq", function()
     -- Get the function name under cursor
     local func_name = vim.fn.expand "<cword>"
