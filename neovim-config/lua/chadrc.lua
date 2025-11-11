@@ -154,50 +154,8 @@ local options = {
             style = "default", -- default/flat_light/flat_dark/atom/atom_colored
         },
 
-        statusline = {
-            enabled = false,
-            theme = "vscode",
-            order = {
-                "mode",
-                "cursor",
-                "diagnostics",
-                "lsp_msg",
-
-                "%=",
-                "file",
-                "dir",
-                "%=",
-                "git",
-                "%=",
-
-                "lsp",
-                "cwd",
-            },
-            modules = {
-                -- show open file's directory
-                dir = function()
-                    return "("
-                        -- Get the parent directory's parent directory's parent directory name (3 levels up)
-                        .. vim.fn.fnamemodify(vim.fn.expand "%:p:h", ":h:h:t")
-                        .. "/"
-                        -- Get the parent directory's parent directory name (2 levels up)
-                        .. vim.fn.fnamemodify(vim.fn.expand "%:p:h", ":h:t")
-                        .. "/"
-                        -- Get the parent directory name (1 level up)
-                        .. vim.fn.expand "%:p:h:t"
-                        .. ")"
-                end,
-            },
-        },
-
-        -- lazyload it when there are 1+ buffers
-        tabufline = {
-            enabled = false,
-            lazyload = false,
-            bufwidth = 35,
-            order = { "treeOffset", "buffers", "tabs", "btns" },
-            modules = nil,
-        },
+        statusline = { enabled = false },
+        tabufline = { enabled = false },
     },
 
     term = {
